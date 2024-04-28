@@ -1,0 +1,13 @@
+{
+	"editor.snippetSuggestions": "top",
+	"[csharp]": {
+		"editor.formatOnSave": true,
+		"editor.codeLens": false
+	},
+	"files.exclude": {
+		"bin/": true,
+		"obj/": true,
+		"Content/bin/": true,
+		"Content/obj/": true
+	}
+}

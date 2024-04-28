@@ -1,0 +1,107 @@
+{
+    "version": "2.0.0",
+	"options": {
+		"cwd": "${workspaceRoot}",
+		"env": {
+            "MYPROJECT": "${workspaceRoot}/project.csproj"
+        }
+    },
+	"presentation": {
+		"echo": false,
+		"reveal": "always",
+		"focus": true,
+		"panel": "shared"
+    },
+	"tasks": [
+		{
+			"label": "Build & Run: Release",
+			"command": "dotnet build -c Release ${MYPROJECT} && dotnet run -c Release ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build: Release",
+			"command": "dotnet build -c Release ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Run: Release",
+			"command": "dotnet run -c Release ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Clean: Release",
+			"command": "dotnet clean -c Release ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build & Run: Debug",
+			"command": "dotnet build -c Debug ${MYPROJECT} && dotnet run -c Debug ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build: Debug",
+			"command": "dotnet build -c Debug ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Run: Debug",
+			"command": "dotnet run -c Debug ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Clean: Debug",
+			"command": "dotnet clean -c Debug ${MYPROJECT}",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Publish",
+			"command": "dotnet publish -r win-x64 -c Release ${workspaceRoot}/project.csproj --self-contained",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$msCompile"
+		}
+    ]
+}
